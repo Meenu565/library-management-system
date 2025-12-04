@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Management System</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f0f0c6;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url( background_picture.jpeg.jpg) no-repeat center center fixed;
+            background-size: cover;
+            filter: blur(3px);
+            z-index: -1;
+        }
+
+        .home-container {
+            text-align: center;
+            background: rgba(240, 240, 240, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 3em;
+            color: #333;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: monospace;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .button-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 2px solid #007bff;
+            transition: transform 0.3s;
+        }
+
+        .button-section img:hover {
+            transform: scale(1.1);
+        }
+
+        .button-section p {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .button-section a {
+            text-decoration: none;
+        }
+
+        .button-section button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button-section button:hover {
+            background-color: #218838;
+        }
+
+        .separator {
+            width: 2px;
+            height: 200px;
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="home-container">
+        <h1>LIBRARY MANAGEMENT SYSTEM</h1>
+        <div class="button-container">
+            <div class="button-section">
+                <a href="login_admin.html"><img src= admin_picture.jpg alt="ADMIN"></a>
+                <a href="login_admin.html"><button>ADMIN</button></a>
+            </div>
+            <div class="separator"></div>
+            <div class="button-section">
+                <a href="login_student.html"><img src= student_picture.png  alt="STUDENT"></a>
+                <a href="login_student.html"><button>STUDENT</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

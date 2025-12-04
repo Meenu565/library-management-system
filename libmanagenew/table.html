@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Access to Library Management Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #f06c6c, #ffffff);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 8px 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #d9232d;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .header-row {
+            background-color: #d9232d;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Access to Library Management Table</h1>
+        <table>
+            <thead>
+                <tr class="header-row">
+                    <th>NO.</th>
+                    <th>Brand</th>
+                    <th>Item name</th>
+                    <th>Spec/Model</th>
+                    <th>Units</th>
+                    <th>Total in stock</th>
+                    <th>Time to stock</th>
+                    <th>Total stock</th>
+                    <th>Total out of the warehouse</th>
+                    <th>Time out of the warehouse</th>
+                    <th>Head</th>
+                    <th>Stock quantity</th>
+                    <th>Tips</th>
+                    <th>Head of inventory</th>
+                    <th>Note</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Haier</td>
+                    <td>Air conditioning</td>
+                    <td>1.5P/2ERP</td>
+                    <td>Taiwan</td>
+                    <td>202</td>
+                    <td>84</td>
+                    <td>angles</td>
+                    <td>432</td>
+                    <td>469</td>
+                    <td>angles</td>
+                    <td>121</td>
+                    <td>angles</td>
+                    <td>angles</td>
+                    <td>angles</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Haier</td>
+                    <td>Fan</td>
+                    <td>1.5P</td>
+                    <td>Taiwan</td>
+                    <td>467</td>
+                    <td>645</td>
+                    <td>angles</td>
+                    <td>132</td>
+                    <td>123</td>
+                    <td>angles</td>
+                    <td>45</td>
+                    <td>Purchase</td>
+                    <td>angles</td>
+                    <td>angles</td>
+                </tr>
+                <!-- Add more rows as necessary -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

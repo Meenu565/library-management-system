@@ -1,0 +1,124 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+}
+
+/* Background Image */
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("C:\\Users\\sowba\\OneDrive\\Pictures\\back1.jpeg") no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container Styles */
+.login-container {
+    background-color: rgba(240, 240, 240, 0.8);
+    padding: 0.5em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.logo {
+    width: 75px;
+    height: 70px;
+    margin-bottom: 1em;
+}
+
+.login-container h2 {
+    margin-bottom: 1em;
+    color: #333;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 1em;
+    text-align: left;
+}
+
+label {
+    margin-bottom: 0.2em;
+    color: #555;
+}
+
+.input-icon {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.5em;
+    background-color: white;
+}
+
+.input-icon img {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5em;
+}
+
+.input-icon input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 0.5em;
+}
+
+.input-icon input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #0df828;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Link Styles */
+.signup-link {
+    display: inline-block;
+    margin-top: 1em;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin: 10px 0;
+}

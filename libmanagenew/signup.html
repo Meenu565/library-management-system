@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="style_signup.css">
+    <script>
+        function toggleStudentFields() {
+            var role = document.getElementById('role').value;
+            var studentFields = document.getElementById('studentFields');
+            if (role === 'student') {
+                studentFields.style.display = 'block';
+            } else {
+                studentFields.style.display = 'none';
+            }
+        }
+
+        function validateUsername() {
+            var username = document.getElementById('username').value;
+            var usernameError = document.getElementById('usernameError');
+            if (!/^[a-zA-Z]+$/.test(username)) {
+                usernameError.innerHTML = "Username can only contain letters.";
+                return false;
+            } else {
+                usernameError.innerHTML = "";
+                return true;
+            }
+        }
+
+        function validatePassword() {
+            var password = document.getElementById('password').value;
+            var passwordError = document.getElementById('passwordError');
+            if (password.length < 8) {
+                passwordError.innerHTML = "Password must be at least 8 characters long.";
+                return false;
+            } else {
+                passwordError.innerHTML = "";
+                return true;
+            }
+        }
+
+        function validateName() {
+            var name = document.getElementById('name').value;
+            var nameError = document.getElementById('nameError');
+            if (!/^[a-zA-Z ]+$/.test(name)) {
+                nameError.innerHTML = "Name can only contain letters and spaces.";
+                return false;
+            } else {
+                nameError.innerHTML = "";
+                return true;
+            }
+        }
+
+        function validateCourse() {
+            var course = document.getElementById('course').value;
+            var courseError = document.getElementById('courseError');
+            if (!/^[a-zA-Z ]+$/.test(course)) {
+                courseError.innerHTML = "Course can only contain letters and spaces.";
+                return false;
+            } else {
+                courseError.innerHTML = "";
+                return true;
+            }
+        }
+
+        function validateYear() {
+            var year = document.getElementById('year').value;
+            var yearError = document.getElementById('yearError');
+            if (!/^[0-9]+$/.test(year)) {
+                yearError.innerHTML = "Year can only contain numbers.";
+                return false;
+            } else {
+                yearError.innerHTML = "";
+                return true;
+            }
+        }
+
+        function validateBranch() {
+            var branch = document.getElementById('branch').value;
+            var branchError = document.getElementById('branchError');
+            if (!/^[a-zA-Z ]+$/.test(branch)) {
+                branchError.innerHTML = "Branch can only contain letters and spaces.";
+                return false;
+            } else {
+                branchError.innerHTML = "";
+                return true;
+            }
+        }
+
+        function validateForm() {
+            var isUsernameValid = validateUsername();
+            var isPasswordValid = validatePassword();
+            var role = document.getElementById('role').value;
+
+            if (role === 'student') {
+                var isNameValid = validateName();
+                var isCourseValid = validateCourse();
+                var isYearValid = validateYear();
+                var isBranchValid = validateBranch();
+                var email = document.getElementById('email').value;
+
+                if (!isNameValid || !isCourseValid || !isYearValid || !isBranchValid || !email) {
+                    document.getElementById('studentFieldsError').innerHTML = "Please fill in all student fields.";
+                    return false;
+                } else {
+                    document.getElementById('studentFieldsError').innerHTML = "";
+                }
+            }
+
+            return isUsernameValid && isPasswordValid;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form action="signup.php" method="POST" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required onkeyup="validateUsername()">
+                <span id="usernameError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required onkeyup="validatePassword()">
+                <span id="passwordError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="role">Role:</label>
+                <select id="role" name="role" onchange="toggleStudentFields()" required>
+                    <option value="admin">Admin</option>
+                    <option value="student">Student</option>
+                </select>
+            </div>
+
+            <div id="studentFields" style="display:none;">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" onkeyup="validateName()">
+                    <span id="nameError" class="error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Course:</label>
+                    <input type="text" id="course" name="course" onkeyup="validateCourse()">
+                    <span id="courseError" class="error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="year">Year:</label>
+                    <input type="text" id="year" name="year" onkeyup="validateYear()">
+                    <span id="yearError" class="error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="branch">Branch:</label>
+                    <input type="text" id="branch" name="branch" onkeyup="validateBranch()">
+                    <span id="branchError" class="error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <span id="studentFieldsError" class="error"></span>
+            </div>
+            
+            <button type="submit">Sign Up</button>
+        </form>
+        <a href="index.html">Already have an account? Login here</a>
+    </div>
+</body>
+</html>

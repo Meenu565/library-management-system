@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #4b0082, #8a2be2); /* Dark to light violet gradient */
+    margin: 0;
+    padding: 20px;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: black;
+    font-family: monospace;
+    background-color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: 40px auto;
+    color: black;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+p strong {
+    display: inline-block;
+    width: 120px;
+}

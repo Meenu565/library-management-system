@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Management System - Admin Login</title>
+    <link rel="stylesheet" href="style_login.css">
+</head>
+<body>
+    <div class="background">
+        <div class="login-container">
+            <img src="booklogo.jpeg" alt="Library Logo" class="logo">
+            <h2>Admin Login</h2>
+        
+            <?php if (isset($_GET['error']) && $_GET['role'] == 'admin'): ?>
+                <p class="error-message"><?php echo htmlspecialchars($_GET['error']); ?></p>
+            <?php endif; ?>
+            <form id="loginForm" action="login.php" method="post">
+                <input type="hidden" name="role" value="admin">
+                <div class="input-group">
+                    <label for="username">User Name</label>
+                    <div class="input-icon">
+                        <img src="admin_picture.jpg" alt="User Icon">
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="input-icon">
+                        <img src="passwordlogologin.jpeg" alt="Password Icon">
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+            <a href="signup.html" class="signup-link">Sign Up</a>
+        </div>
+    </div>
+</body>
+</html>

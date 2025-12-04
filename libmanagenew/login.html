@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Management System - Login</title>
+    <link rel="stylesheet" href="style_login.css">
+</head>
+<body>
+    <div class="background">
+        <div class="login-container">
+            <img src="images/booklogo.jpeg" alt="Library Logo" class="logo">
+            <h2>Library Management System</h2>
+            <form id="loginForm" action="login.php" method="post">
+                <div class="input-group">
+                    <label for="username">User Name</label>
+                    <div class="input-icon">
+                        <img src="images/usericon_login.jpeg" alt="User Icon">
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="input-icon">
+                        <img src="images/passwordlogologin.jpeg" alt="Password Icon">
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+            <a href="signup.html" class="signup-link">Sign Up</a>
+        </div>
+    </div>
+    <script>
+        const form = document.getElementById('loginForm');
+        form.addEventListener('submit', function(event) {
+            // Example client-side validation
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (username === 'user' && password === 'pass') {
+                alert('Login Successful!');
+                window.location.href = 'dashboard_admin.html';
+            } else if(username === 'user') {
+                // Example redirection for demo purposes
+                alert('Invalid credentials');
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
